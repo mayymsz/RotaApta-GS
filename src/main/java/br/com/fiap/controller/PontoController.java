@@ -38,8 +38,7 @@ public class PontoController {
     }
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid PontoDTO pontoDTO) {
-
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid PontoDTO pontoDTO) {
         try {
             if (pontoRepository.existsById(pontoDTO.idPonto())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -50,14 +49,13 @@ public class PontoController {
             pontoRepository.save(ponto);
 
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Ponto cadastrado com sucesso!");
+                    .body(ponto);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body("Erro ao cadastrar o ponto.");
         }
     }
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> excluir(@PathVariable Long id) {

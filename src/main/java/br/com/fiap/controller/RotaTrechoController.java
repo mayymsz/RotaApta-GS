@@ -51,7 +51,7 @@ public class RotaTrechoController {
     }
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid RotaTrechoDTO rotaTrechoDTO) {
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid RotaTrechoDTO rotaTrechoDTO) {
         try {
             RotaTrechoId id = new RotaTrechoId(
                     rotaTrechoDTO.idRota(),
@@ -67,7 +67,7 @@ public class RotaTrechoController {
             rotaTrechoRepository.save(rotaTrecho);
 
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Associação cadastrada com sucesso!");
+                    .body(rotaTrecho);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)

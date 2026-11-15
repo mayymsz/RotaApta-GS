@@ -46,7 +46,7 @@ public class ObstaculoController {
     }
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid ObstaculoDTO obstaculoDTO) {
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid ObstaculoDTO obstaculoDTO) {
         try {
             if (obstaculoRepository.existsById(obstaculoDTO.idObstaculo())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -57,7 +57,7 @@ public class ObstaculoController {
             obstaculoRepository.save(obstaculo);
 
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Obstáculo cadastrado com sucesso!");
+                    .body(obstaculo);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)

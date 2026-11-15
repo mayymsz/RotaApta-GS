@@ -46,7 +46,7 @@ public class RotaController {
     }
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid RotaDTO rotaDTO) {
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid RotaDTO rotaDTO) {
         try {
             if (rotaRepository.existsById(rotaDTO.idRota())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -57,7 +57,7 @@ public class RotaController {
             rotaRepository.save(rota);
 
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Rota cadastrada com sucesso!");
+                    .body(rota);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)

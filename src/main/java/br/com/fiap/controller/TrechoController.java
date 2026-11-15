@@ -38,7 +38,7 @@ public class TrechoController {
     }
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid TrechoDTO trechoDTO) {
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid TrechoDTO trechoDTO) {
         try {
             if (trechoRepository.existsById(trechoDTO.idTrecho())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -49,7 +49,7 @@ public class TrechoController {
             trechoRepository.save(trecho);
 
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Trecho cadastrado com sucesso!");
+                    .body(trecho);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)

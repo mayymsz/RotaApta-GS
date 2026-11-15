@@ -46,7 +46,7 @@ public class AvaliacaoController {
     }
 
     @PostMapping
-    public ResponseEntity<String> cadastrar(@RequestBody @Valid AvaliacaoDTO avaliacaoDTO) {
+    public ResponseEntity<?> cadastrar(@RequestBody @Valid AvaliacaoDTO avaliacaoDTO) {
         try {
             if (avaliacaoRepository.existsById(avaliacaoDTO.idAvaliacao())) {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST)
@@ -57,7 +57,7 @@ public class AvaliacaoController {
             avaliacaoRepository.save(avaliacao);
 
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body("Avaliação cadastrada com sucesso!");
+                    .body(avaliacao);
 
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
