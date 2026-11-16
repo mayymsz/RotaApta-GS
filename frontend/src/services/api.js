@@ -1,4 +1,4 @@
-const BASE = '/api'
+const BASE = import.meta.env.DEV ? '/api' : ''
 
 export async function request(path, { signal, ...options } = {}) {
   const controller = new AbortController()
