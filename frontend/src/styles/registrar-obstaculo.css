@@ -1,0 +1,38 @@
+.register-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); align-items: start; gap: 24px; }
+.register-form { padding: 29px 30px 24px; margin: 0; min-width: 0; }
+.textarea-shell { position: relative; background: linear-gradient(120deg, #2941518c, #263b4b6e); border: 1px solid #8eb4c34d; border-radius: 12px; }
+.textarea-shell textarea { display: block; resize: vertical; width: 100%; min-height: 132px; padding: 14px 17px 35px; background: none; border: 0; outline: 0; color: #edf5fc; font-size: 15px; line-height: 1.7; }
+.character-count { position: absolute; bottom: 11px; right: 16px; color: #bdcdd8; font-size: 11px; pointer-events: none; }
+.severity-fieldset { min-width: 0; padding: 0; margin: 0 0 23px; border: 0; }
+.severity-fieldset legend { font-size: 15px; margin-bottom: 10px; }
+.severity-options { display: flex; gap: 9px; }
+.severity-options label { position: relative; flex: 1; min-height: 34px; display: grid; place-items: center; border: 1px solid #88b0bb37; background: #16323c40; border-radius: 8px; font-size: 12px; color: #b2ccd4; cursor: pointer; }
+.severity-options input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.severity-options label.selected { border-color: #7ae7ba; background: #38deaa1f; color: #aafad6; }
+.severity-options label:has(input:focus-visible) { outline: 2px solid #76ffe5; outline-offset: 3px; }
+.range-labels { display: flex; justify-content: space-between; font-size: 9px; color: #8faab8; margin-top: 7px; }
+.photo-field { margin-bottom: 0; }
+.upload-box { width: 100%; min-height: 92px; display: flex; align-items: center; justify-content: center; gap: 21px; background: #15313f24; border: 1px dashed #b5ced485; border-radius: 12px; color: #e9f3f9; font-size: 15px; text-align: left; }
+.upload-box:hover { border-color: #79edcd; background: #16435442; }
+.upload-box small { display: block; margin-top: 7px; font-size: 10px; color: #a7bfca; }
+.photo-field .field-hint { font-size: 10px; }
+.photo-preview { display: flex; align-items: center; gap: 12px; padding: 10px; border: 1px solid #7dc0bc49; border-radius: 11px; }
+.photo-preview img { width: 65px; height: 65px; object-fit: cover; border-radius: 8px; }
+.photo-preview > span { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: 12px; color: #b8d1db; }
+.photo-preview .icon-button { width: 33px; height: 33px; }
+.register-sidebar { display: flex; flex-direction: column; gap: 22px; }
+.register-sidebar .map-card.compact { height: 278px; }
+.information-card { padding: 23px 27px; background: linear-gradient(130deg, #183b456b, #16344382); }
+.information-card .section-title { font-size: 20px; }
+.check-list { margin: 20px 0 18px; padding: 0; list-style: none; }
+.check-list li { display: flex; align-items: flex-start; gap: 13px; margin-bottom: 13px; color: #d9e7ed; font-size: 13px; line-height: 1.6; }
+.check-list .icone { color: #62ed98; width: 20px; height: 20px; margin-top: 1px; }
+.author-line { display: flex; gap: 10px; align-items: flex-start; padding-top: 16px; border-top: 1px solid #b9d8df1a; color: #a3c5cd; font-size: 11px; line-height: 1.6; }
+.author-line .icone { color: #67dcc4; margin-top: 1px; }
+.author-line strong { color: #cfebe7; font-weight: 550; }
+.register-sidebar > .button { min-height: 61px; font-size: 19px; }
+.register-sidebar > .form-footnote { margin: -9px 0 0; }
+.register-sidebar > .notice { margin-bottom: 0; }
+@media (max-width: 1050px) { .register-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px; } .register-form { padding: 26px 24px; } .information-card { padding: 23px; } .information-card .section-title { font-size: 18px; } }
+@media (max-width: 850px) { .register-grid { grid-template-columns: 1fr; } .register-sidebar .map-card.compact { height: 300px; } .register-form { padding: 28px; } }
+@media (max-width: 600px) { .register-form { padding: 24px 20px; } .textarea-shell textarea { font-size: 14px; min-height: 140px; } .register-sidebar .map-card.compact { height: 260px; } .register-sidebar > .button { font-size: 17px; min-height: 56px; } .check-list li { font-size: 12px; } .upload-box { gap: 15px; font-size: 14px; } }

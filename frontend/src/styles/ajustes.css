@@ -1,0 +1,16 @@
+.route-list { padding: 25px; margin-top: 22px; }
+.saved-route { display: flex; align-items: center; gap: 13px; padding: 18px 0; border-top: 1px solid var(--line); }
+.saved-route:hover strong { color: #73f5c9; }
+.saved-route-text { flex: 1; min-width: 0; }
+.saved-route strong { display: block; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.saved-route small { display: block; color: var(--muted); font-size: 11px; line-height: 1.6; margin-top: 5px; }
+.empty-copy { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 23px 0; }
+.recent-link { margin: 20px 0 16px; }
+.connection-notice { margin-bottom: 24px; }
+.connection-notice p { margin: 7px 0; font-size: 12px; overflow-wrap: anywhere; }
+.loading-line { color: var(--muted); font-size: 12px; display: flex; align-items: center; gap: 10px; margin: 16px 0; }
+.planning-sidebar .map-card.compact { height: 350px; }
+.status-text { font-size: 13px !important; overflow-wrap: anywhere; white-space: normal !important; }
+.register-form > .button { margin-top: 18px; }
+.summary-card { padding-bottom: 16px; }
+@media (max-width: 600px) { .route-list { padding: 21px 18px; } .saved-route { gap: 9px; } .saved-route > .badge { display: none; } .planning-sidebar .map-card.compact { height: 285px; } }

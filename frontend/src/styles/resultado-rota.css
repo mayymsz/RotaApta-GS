@@ -1,0 +1,45 @@
+.result-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, .95fr); gap: 24px; align-items: start; }
+.result-map-column { min-width: 0; }
+.route-endpoints { display: flex; gap: 12px; align-items: center; min-height: 32px; margin-bottom: 12px; color: #b5cad6; font-size: 12px; line-height: 1.6; }
+.route-endpoints > span { min-width: 0; overflow-wrap: anywhere; }
+.endpoint-dot { display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: #05c4f6; }
+.endpoint-dot.green { background: #66ed93; }
+.map-card.result-map { height: 562px; }
+.map-caption { color: #97afbe; font-size: 10px; line-height: 1.8; display: flex; gap: 7px; margin: 12px 4px 0; }
+.map-caption .icone { margin-top: 2px; }
+.result-sidebar { display: flex; flex-direction: column; gap: 19px; }
+.summary-card { padding: 22px 24px 8px; }
+.summary-card .section-title { margin-bottom: 10px; }
+.summary-list { margin: 0; }
+.summary-list > div { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 47px; padding: 10px 0; }
+.summary-list > div + div { border-top: 1px solid #b3ccda24; }
+.summary-list dt { display: flex; align-items: center; gap: 16px; font-size: 13px; }
+.summary-list dt > .icone { width: 21px; height: 21px; color: #66e4e3; }
+.summary-list dd { margin: 0; font-size: 18px; font-weight: 650; white-space: nowrap; }
+.alternative-card { display: flex; gap: 13px; align-items: center; text-align: left; width: 100%; padding: 17px 20px; color: #eaf6fa; border-radius: 17px; }
+button.alternative-card:hover { border-color: #77e8cd75; background-color: #18414a50; }
+.alternative-card > span:nth-child(2) { flex: 1; min-width: 0; }
+.alternative-card strong { display: block; font-size: 13px; line-height: 1.5; }
+.alternative-card small { display: block; font-size: 10px; color: #a9bdca; margin-top: 4px; line-height: 1.5; }
+.alternative-metrics { font-size: 10px; white-space: nowrap; }
+.alternative-metrics > span { color: #9fb1bf; margin: 0 3px; }
+.compact-note { color: #adc4cf; font-size: 12px; line-height: 1.6; }
+.compact-note .icone { color: #63deb8; }
+.route-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+.route-actions .button { padding: 12px 9px; min-height: 49px; font-size: 12px; gap: 9px; }
+.route-details { padding: 22px 24px; scroll-margin-top: 25px; }
+.route-details .section-title { font-size: 19px; }
+.route-steps { list-style: none; padding: 0; margin: 21px 0 19px; }
+.route-steps li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; }
+.step-number { display: grid; place-items: center; flex-shrink: 0; width: 22px; height: 22px; color: #73edbe; background: #3bd6a01b; border: 1px solid #5ee5a934; border-radius: 8px; font-size: 10px; }
+.route-steps strong { display: block; font-size: 12px; font-weight: 550; line-height: 1.5; }
+.route-steps small { display: block; color: #93aebc; font-size: 10px; margin-top: 4px; }
+.route-details .field-hint { font-size: 10px; margin-bottom: 0; }
+.route-obstacles { margin-top: 25px; padding: 24px 28px; }
+.route-obstacles .section-title { font-size: 19px; }
+.all-clear { display: flex; gap: 9px; align-items: center; color: #b7ddcd; font-size: 13px; margin: 22px 0 4px; }
+.all-clear .icone { color: #59e9a4; }
+.obstacle-description { margin: -7px 0 18px 63px; font-size: 12px; color: #a9bdca; line-height: 1.7; white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-width: 1150px) { .result-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; } .summary-card { padding: 21px 20px 7px; } .alternative-card { padding: 15px; gap: 10px; } .alternative-metrics { display: none; } .route-details { padding: 22px 20px; } .summary-list dt { font-size: 12px; gap: 11px; } .summary-list dd { font-size: 16px; } }
+@media (max-width: 850px) { .result-grid { grid-template-columns: 1fr; } .map-card.result-map { height: 400px; } .result-sidebar { gap: 18px; } .alternative-metrics { display: inline; } .summary-card { padding: 24px 25px 10px; } .summary-list dt { font-size: 14px; } .route-actions .button { font-size: 14px; } }
+@media (max-width: 600px) { .map-card.result-map { height: 345px; } .route-endpoints { font-size: 10px; gap: 8px; } .route-obstacles { padding: 23px 20px; } .route-obstacles .section-title { font-size: 18px; } .summary-list dt { font-size: 12px; gap: 10px; } .summary-list dd { font-size: 16px; } .route-actions { gap: 11px; } .route-actions .button { font-size: 12px; gap: 8px; } .alternative-metrics { display: none; } .all-clear { font-size: 12px; align-items: flex-start; line-height: 1.8; } .obstacle-description { margin-left: 56px; } }
