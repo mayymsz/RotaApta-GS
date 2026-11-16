@@ -50,17 +50,17 @@ O frontend React está integrado ao Spring Boot, permitindo que toda a aplicaç�
 - Acesso ao Oracle Database da FIAP
 - Maven (o projeto inclui Maven Wrapper)
 
-### Passo 1 — Clonar o repositório
+### Passo 1 - Clonar o repositório
 
 ```bash
 git clone https://github.com/mayymsz/RotaApta-GS.git
 ```
 
-### Passo 2 — Abrir o projeto
+### Passo 2 - Abrir o projeto
 
 Abra a pasta do projeto no IntelliJ IDEA e aguarde o carregamento das dependências Maven.
 
-### Passo 3 — Configurar o Oracle
+### Passo 3 - Configurar o Oracle
 
 Configure as seguintes variáveis de ambiente:
 
@@ -72,13 +72,13 @@ Configure as seguintes variáveis de ambiente:
 
 As credenciais devem ser configuradas no ambiente de execução e não devem ser incluídas no código-fonte.
 
-### Passo 4 — Executar a aplicação
+### Passo 4 - Executar a aplicação
 
 No IntelliJ IDEA, execute a classe principal:
 
 `src/main/java/br/com/fiap/RotaaptaApplication.java`
 
-### Passo 5 — Acessar o sistema
+### Passo 5 - Acessar o sistema
 
 Após a inicialização do Spring Boot, acesse:
 
@@ -90,7 +90,7 @@ O frontend compilado está integrado ao backend em `src/main/resources/static`, 
 
 O RotaApta está publicado no Render, utilizando Docker para executar o Spring Boot com o frontend React integrado.
 
-**Acesse a aplicação:**
+**Acesse a plataforma:**
 
 https://rotaapta-gs.onrender.com
 
